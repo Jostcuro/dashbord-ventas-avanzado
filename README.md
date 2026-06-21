@@ -144,7 +144,7 @@ Los componentes nunca se comunican directamente. Todo el flujo de datos pasa por
 
 ## Autor
 
-**Johan Cuero** — [@tu-twitter](https://twitter.com/tu-twitter)
+**Johan Steven Cuero Rodríguez** — [@Instagram](https://www.instagram.com/johan_stevencr/)
 
 ## Licencia
 
