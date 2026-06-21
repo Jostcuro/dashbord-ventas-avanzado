@@ -1,0 +1,107 @@
+[
+  {
+    "id": "s1",
+    "userId": "u1",
+    "productId": "p1",
+    "date": "2026-01-15",
+    "quantity": 2
+  },
+  {
+    "id": "s2",
+    "userId": "u2",
+    "productId": "p3",
+    "date": "2026-01-22",
+    "quantity": 1
+  },
+  {
+    "id": "s3",
+    "userId": "u3",
+    "productId": "p2",
+    "date": "2026-02-03",
+    "quantity": 3
+  },
+  {
+    "id": "s4",
+    "userId": "u1",
+    "productId": "p5",
+    "date": "2026-02-14",
+    "quantity": 1
+  },
+  {
+    "id": "s5",
+    "userId": "u4",
+    "productId": "p4",
+    "date": "2026-02-28",
+    "quantity": 2
+  },
+  {
+    "id": "s6",
+    "userId": "u5",
+    "productId": "p1",
+    "date": "2026-03-05",
+    "quantity": 1
+  },
+  {
+    "id": "s7",
+    "userId": "u2",
+    "productId": "p2",
+    "date": "2026-03-12",
+    "quantity": 4
+  },
+  {
+    "id": "s8",
+    "userId": "u3",
+    "productId": "p3",
+    "date": "2026-03-20",
+    "quantity": 1
+  },
+  {
+    "id": "s9",
+    "userId": "u4",
+    "productId": "p5",
+    "date": "2026-04-02",
+    "quantity": 2
+  },
+  {
+    "id": "s10",
+    "userId": "u5",
+    "productId": "p4",
+    "date": "2026-04-10",
+    "quantity": 1
+  },
+  {
+    "id": "s11",
+    "userId": "u1",
+    "productId": "p3",
+    "date": "2026-04-18",
+    "quantity": 3
+  },
+  {
+    "id": "s12",
+    "userId": "u2",
+    "productId": "p1",
+    "date": "2026-05-01",
+    "quantity": 1
+  },
+  {
+    "id": "s13",
+    "userId": "u3",
+    "productId": "p4",
+    "date": "2026-05-15",
+    "quantity": 2
+  },
+  {
+    "id": "s14",
+    "userId": "u4",
+    "productId": "p2",
+    "date": "2026-06-01",
+    "quantity": 5
+  },
+  {
+    "id": "s15",
+    "userId": "u5",
+    "productId": "p5",
+    "date": "2026-06-10",
+    "quantity": 1
+  }
+]

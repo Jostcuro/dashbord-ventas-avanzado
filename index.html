@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-surface-alt text-text font-sans">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-surface border-r border-gray-200 dark:border-gray-800 flex flex-col fixed h-full z-20">
+      <div class="p-6 border-b border-gray-200 dark:border-gray-800">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/>
+              <path d="m19 9-5 5-4-4-3 3"/>
+            </svg>
+          </div>
+          <span id="logo-text" class="font-bold text-lg">SalesDash</span>
+        </div>
+      </div>
+      <nav class="flex-1 p-4 space-y-1">
+        <a href="#" data-view="dashboard" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-900 dark:bg-gray-700/50 text-white font-medium">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="7" height="9" x="3" y="3" rx="1"/>
+            <rect width="7" height="5" x="14" y="3" rx="1"/>
+            <rect width="7" height="9" x="14" y="12" rx="1"/>
+            <rect width="7" height="5" x="3" y="16" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="#" data-view="customers" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700/50 dark:hover:text-white transition-colors">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Customers
+        </a>
+        <a href="#" data-view="products" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700/50 dark:hover:text-white transition-colors">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m7.5 4.27 9 5.15"/>
+            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+            <path d="m3.3 7 8.7 5 8.7-5"/>
+            <path d="M12 22V12"/>
+          </svg>
+          Products
+        </a>
+        <a href="#" data-view="settings" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700/50 dark:hover:text-white transition-colors">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          Settings
+        </a>
+      </nav>
+      <div class="p-4 border-t border-gray-200 dark:border-gray-800">
+        <div class="flex items-center gap-3 px-4 py-2">
+          <div class="w-9 h-9 rounded-full bg-brand flex items-center justify-center text-white font-semibold text-sm">JC</div>
+          <div>
+            <p class="font-medium text-sm">Johan Cuero</p>
+            <p class="text-xs text-text-muted">Admin</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 ml-64 flex flex-col">
+      <!-- Navbar -->
+      <header class="h-16 bg-surface border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6 sticky top-0 z-10">
+        <div class="flex items-center gap-4">
+          <h1 id="page-title" class="text-xl font-semibold">Dashboard</h1>
+        </div>
+        <div class="flex items-center gap-4">
+          <button id="btn-add-sale" class="btn-primary flex items-center gap-2 text-sm">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="M12 5v14"/>
+            </svg>
+            New Sale
+          </button>
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <svg id="icon-sun" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2"/>
+              <path d="M12 20v2"/>
+              <path d="m4.93 4.93 1.41 1.41"/>
+              <path d="m17.66 17.66 1.41 1.41"/>
+              <path d="M2 12h2"/>
+              <path d="M20 12h2"/>
+              <path d="m6.34 17.66-1.41 1.41"/>
+              <path d="m19.07 4.93-1.41 1.41"/>
+            </svg>
+            <svg id="icon-moon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <main class="flex-1 p-6 space-y-6">
+
+        <!-- VIEW: Dashboard -->
+        <section id="view-dashboard" class="space-y-6">
+          <div id="stats-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+          <div id="filter-container" class="card"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="card">
+              <h3 class="font-semibold text-sm mb-4 text-text-secondary">Revenue Trend</h3>
+              <div class="relative h-64">
+                <canvas id="chart-revenue"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-sm mb-4 text-text-secondary">Sales by Region</h3>
+              <div class="relative h-64">
+                <canvas id="chart-region"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-sm mb-4 text-text-secondary">Category Distribution</h3>
+              <div class="relative h-64">
+                <canvas id="chart-category"></canvas>
+              </div>
+            </div>
+          </div>
+          <div id="table-container"></div>
+        </section>
+
+        <!-- VIEW: Customers -->
+        <section id="view-customers" class="hidden space-y-6"></section>
+
+        <!-- VIEW: Products -->
+        <section id="view-products" class="hidden space-y-6"></section>
+
+        <!-- VIEW: Settings -->
+        <section id="view-settings" class="hidden space-y-6"></section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Sale Form Modal -->
+  <div id="modal-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+    <div class="bg-surface rounded-2xl shadow-2xl w-full max-w-md mx-4 p-6 space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold">New Sale</h2>
+        <button id="btn-close-modal" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/>
+            <path d="m6 6 12 12"/>
+          </svg>
+        </button>
+      </div>
+      <form id="sale-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-text-secondary mb-1">Customer</label>
+          <select id="form-user" class="select-field" required>
+            <option value="">Select customer</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-text-secondary mb-1">Product</label>
+          <select id="form-product" class="select-field" required>
+            <option value="">Select product</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-text-secondary mb-1">Quantity</label>
+            <input id="form-quantity" type="number" min="1" class="input-field" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-text-secondary mb-1">Date</label>
+            <input id="form-date" type="date" class="input-field" required>
+          </div>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <button type="button" id="btn-cancel" class="btn-secondary flex-1">Cancel</button>
+          <button type="submit" class="btn-primary flex-1">Add Sale</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

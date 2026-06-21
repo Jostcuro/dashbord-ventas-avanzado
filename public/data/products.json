@@ -1,0 +1,32 @@
+[
+  {
+    "id": "p1",
+    "name": "MacBook Pro 16\"",
+    "category": "Laptops",
+    "price": 2499.99
+  },
+  {
+    "id": "p2",
+    "name": "Sony WH-1000XM5",
+    "category": "Audio",
+    "price": 349.99
+  },
+  {
+    "id": "p3",
+    "name": "iPhone 16 Pro",
+    "category": "Phones",
+    "price": 1199.99
+  },
+  {
+    "id": "p4",
+    "name": "iPad Air M3",
+    "category": "Tablets",
+    "price": 799.99
+  },
+  {
+    "id": "p5",
+    "name": "LG UltraWide 34\"",
+    "category": "Monitors",
+    "price": 599.99
+  }
+]

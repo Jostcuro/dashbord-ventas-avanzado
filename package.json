@@ -1,0 +1,23 @@
+{
+  "name": "dashbord-ventas-avanzado",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard de Ventas Avanzado - Panel de administración",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.5.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "tailwindcss": "^4.3.1",
+    "vite": "^8.0.16"
+  }
+}

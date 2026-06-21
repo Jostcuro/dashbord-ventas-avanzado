@@ -1,0 +1,32 @@
+[
+  {
+    "id": "u1",
+    "name": "Carlos Mendoza",
+    "email": "carlos.mendoza@email.com",
+    "region": "Americas"
+  },
+  {
+    "id": "u2",
+    "name": "María García",
+    "email": "maria.garcia@email.com",
+    "region": "Europe"
+  },
+  {
+    "id": "u3",
+    "name": "Yuki Tanaka",
+    "email": "yuki.tanaka@email.com",
+    "region": "Asia"
+  },
+  {
+    "id": "u4",
+    "name": "Lucas Silva",
+    "email": "lucas.silva@email.com",
+    "region": "Americas"
+  },
+  {
+    "id": "u5",
+    "name": "Emma Fischer",
+    "email": "emma.fischer@email.com",
+    "region": "Europe"
+  }
+]
